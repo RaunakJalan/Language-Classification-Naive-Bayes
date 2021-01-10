@@ -15,8 +15,9 @@ def homePage():
 def index():
     if request.method == 'POST':
         inputText = request.form['content']
+        inputText = inputText.strip()
         language = predict_language(inputText)
-        return render_template('index.html', result=language)
+        return render_template('index.html', result=[inputText, language])
     else:
         return render_template('index.html')
 

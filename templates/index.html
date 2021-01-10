@@ -21,7 +21,8 @@
     <div>
 	<h1 style="text-align: center">Result:</h1>
     	{% if result is defined and result|length %}
-    		<h3 style="text-align: center">Language for the sentence is: {{result}}</h3>
+		<h3 style="text-align: center">Sentence: {{result[0]}}</h3>
+    		<h3 style="text-align: center">Language for the sentence is: {{result[1]}}</h3>
     	{% else %}
 		<h3 style="text-align: center">No sentence entered.</h3>
     	
